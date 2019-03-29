@@ -1,0 +1,7 @@
+.idea/*
+.idea_modules/
+.gradle/*
+out/
+build/
+application.properties
+/gradle.properties
