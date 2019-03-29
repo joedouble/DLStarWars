@@ -43,7 +43,7 @@ p {
     height: auto;
     position: relative;
     overflow: hidden;
-    width: 742px;
+    width: 1000px;
 }
 
 #top {
@@ -130,6 +130,13 @@ p {
 }
 
 #content .content_instance_big p {
+    font-size: 16px;
+    color: #000000;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+li {
     font-size: 16px;
     color: #000000;
     padding-left: 10px;
