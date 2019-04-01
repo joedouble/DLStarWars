@@ -5,7 +5,7 @@ html, body {
 }
 
 p {
-    text-align: left;
+    text-align: center;
 }
 
 body {
@@ -18,7 +18,7 @@ body {
     text-align: left;
     font-family: Helvetica, Arial, sans-serif;
     font-size: 13px;
-    color: #F1F5F8;
+    color: #000000;
 }
 
 * {
@@ -30,11 +30,6 @@ body {
 html, body {
     text-align: center;
 }
-
-p {
-    text-align: left;
-}
-
 
 #page {
     margin: 0 auto 0 auto;
@@ -85,7 +80,7 @@ p {
     margin-top: 2px;
     padding-right: 21px;
     position: relative;
-    color: #FFFFFF;
+    color: #000000;
     text-align: left;
     font-size: 16px;
     font-family: Arial, Helvetica, sans-serif;
@@ -223,4 +218,21 @@ a img {
     color: #FFFFFF;
 }
 
+.name {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
+}
+
+h3 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 2px;
+}
+
+form {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}

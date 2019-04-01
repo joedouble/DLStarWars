@@ -19,9 +19,12 @@
 
         <div class="content_instance_big">
             <h2>The Characters of Star Wars, Episode 5</h2>
-            <!--<ul th:each="characterURL : ${characterList}">-->
-                <!--<li th:text="${characterURL.characters}">First Characters</li>-->
-            </ul>
+            <br>
+            <div class="name" th:each="characterNames : ${characterNames}">
+                <a th:href="@{/characterdetails/} + ${characterNames}">
+                    <p th:text="${characterNames}">Name</p>
+                </a>
+            </div>
         </div>
 
     </div>
