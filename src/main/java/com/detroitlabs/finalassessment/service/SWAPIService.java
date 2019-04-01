@@ -21,7 +21,8 @@ public class SWAPIService {
         HttpEntity entity = new HttpEntity(headers);
         RestTemplate restTemplate = new RestTemplate();
 
-        ResponseEntity<MovieDetailWrapper> response = restTemplate.exchange("https://swapi.co/api/films/2", HttpMethod.GET,
+        ResponseEntity<MovieDetailWrapper> response = restTemplate.exchange("https://swapi.co/api/films/2",
+                HttpMethod.GET,
                 entity, MovieDetailWrapper.class);
         return response.getBody();
     }
@@ -49,7 +50,8 @@ public class SWAPIService {
         HttpEntity entity = new HttpEntity(headers);
         RestTemplate restTemplate = new RestTemplate();
 
-        ResponseEntity<CharacterDetailsWrapper> response = restTemplate.exchange("https://swapi.co/api/people/?search=" + name, HttpMethod.GET,
+        ResponseEntity<CharacterDetailsWrapper> response = restTemplate.exchange("https://swapi.co/api/people/?search" +
+                        "=" + name, HttpMethod.GET,
                 entity, CharacterDetailsWrapper.class);
         return response.getBody();
     }

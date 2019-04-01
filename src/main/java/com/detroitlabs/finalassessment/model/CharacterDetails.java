@@ -29,6 +29,7 @@ public class CharacterDetails {
     public void setName(String name) {
         this.name = name;
     }
+
     @JsonProperty("birth_year")
     public String getBirthYear() {
         return birthYear;
