@@ -17,7 +17,7 @@ public class CharacterController {
     private SWAPIService swapiService;
 
     @RequestMapping("/")
-    public String fetchCharacters(ModelMap modelMap) {
+    public String fetchAllCharactersInMovies(ModelMap modelMap) {
         MovieDetailWrapper movieDetailWrapper = swapiService.fetchMovieDetails();
         ArrayList<String> charactersInMovies = movieDetailWrapper.getCharacters();
 
@@ -30,8 +30,8 @@ public class CharacterController {
         return "index";
     }
 
-    @RequestMapping("/characterdetails/{name}")
-    public String fetchCharacterDetails(@PathVariable String name, ModelMap modelMap) {
+    @RequestMapping("/characterinfo/{name}")
+    public String fetchCharacterInformation(@PathVariable String name, ModelMap modelMap) {
         CharacterDetailsWrapper characterDetailsWrapper = swapiService.fetchCharacterDetails(name);
         Results results = characterDetailsWrapper.getResults();
 
@@ -41,6 +41,6 @@ public class CharacterController {
         }
 
         modelMap.put("results", results);
-        return "characterdetails";
+        return "characterinfo";
     }
 }

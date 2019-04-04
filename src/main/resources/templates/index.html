@@ -21,7 +21,7 @@
             <h2>The Characters of Star Wars, Episode 5</h2>
             <br>
             <div class="name" th:each="characterNames : ${characterNames}">
-                <a th:href="@{/characterdetails/} + ${characterNames}">
+                <a th:href="@{/characterinfo/} + ${characterNames}">
                     <p th:text="${characterNames}">Name</p>
                 </a>
             </div>
