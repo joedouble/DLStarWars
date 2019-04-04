@@ -20,11 +20,11 @@
         <div class="content_instance_big">
             <h2>The Characters of Star Wars, Episode 5</h2>
             <br>
-            <div class="name" th:each="characterNames : ${characterNames}">
+            <ul class="name" th:each="characterNames : ${characterNames}">
                 <a th:href="@{/characterinfo/} + ${characterNames}">
-                    <p th:text="${characterNames}">Name</p>
+                    <li th:text="${characterNames}">Name</li>
                 </a>
-            </div>
+            </ul>
         </div>
 
     </div>
