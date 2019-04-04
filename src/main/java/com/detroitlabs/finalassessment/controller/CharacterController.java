@@ -36,8 +36,8 @@ public class CharacterController {
         Results results = characterDetailsWrapper.getResults();
 
         for (CharacterDetails planet : results) {
-            PlanetWrapper planetWrapper = swapiService.fetchPlanetName(planet.getHomeworld());
-            planet.setHomeworldName(planetWrapper.getName());
+            HomeworldWrapper homeworldWrapper = swapiService.fetchHomeworldName(planet.getHomeworld());
+            planet.setHomeworldName(homeworldWrapper.getName());
         }
 
         modelMap.put("results", results);

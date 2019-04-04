@@ -3,7 +3,7 @@ package com.detroitlabs.finalassessment.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class PlanetWrapper {
+public class HomeworldWrapper {
 
     private String name;
 

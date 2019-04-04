@@ -3,13 +3,10 @@ package com.detroitlabs.finalassessment.service;
 import com.detroitlabs.finalassessment.model.CharacterDetailsWrapper;
 import com.detroitlabs.finalassessment.model.CharacterWrapper;
 import com.detroitlabs.finalassessment.model.MovieDetailWrapper;
-import com.detroitlabs.finalassessment.model.PlanetWrapper;
+import com.detroitlabs.finalassessment.model.HomeworldWrapper;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 
 @Component
 public class SWAPIService {
@@ -56,7 +53,7 @@ public class SWAPIService {
         return response.getBody();
     }
 
-    public PlanetWrapper fetchPlanetName(String planetUrl) {
+    public HomeworldWrapper fetchHomeworldName(String planetUrl) {
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("user-agent", "spring");
@@ -64,8 +61,8 @@ public class SWAPIService {
         HttpEntity entity = new HttpEntity(headers);
         RestTemplate restTemplate = new RestTemplate();
 
-        ResponseEntity<PlanetWrapper> response = restTemplate.exchange(planetUrl, HttpMethod.GET,
-                entity, PlanetWrapper.class);
+        ResponseEntity<HomeworldWrapper> response = restTemplate.exchange(planetUrl, HttpMethod.GET,
+                entity, HomeworldWrapper.class);
         return response.getBody();
     }
 
